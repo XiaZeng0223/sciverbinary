@@ -1,4 +1,4 @@
-# SciFact README
+# sciverbinary README
 
 This repository presents team QMUL-SDS's participation on SCIVER shared task. Compared to the baseline system, we achieve substantial improvements on the dev set. As a result, our team is the No. 4 team on the leaderboard. 
 
