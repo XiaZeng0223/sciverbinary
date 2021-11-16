@@ -29,7 +29,7 @@ Please use `evidence` environment if you want to reproduce results from the base
 For your convenience, the proprecessed data is available [here](https://www.dropbox.com/sh/gwq9bkto4bpq7bz/AADj8Zj1gx9ew4xWTN7cS_0oa?dl=0); please see detailed descriptions of the SCIFACT dataset [here](https://github.com/allenai/scifact).
 
 ## Download trained Models
-The models we used to generation final submissions are available [here](https://drive.google.com/file/d/1ST9UPUceeCJMF4Phnrrh50LrCbTFuCaO/view?usp=sharing). They are trained with both train set and dev set.
+The models we used to generation final submissions are available [here](https://drive.google.com/file/d/1ckqmjvCs20xyyLLlp3AuD8Dzdr0npVq_/view?usp=sharing). They are trained with both train set and dev set.
 
 Our paper reported model performance of various BERT variants that are trained on train set and evaluated on dev set. They are only available upon request due to their large file size.
 
