@@ -1,6 +1,6 @@
 # sciverbinary README
 
-This repository presents team QMUL-SDS's participation on SCIVER shared task. Compared to the baseline system, we achieve substantial improvements on the dev set. As a result, our team is the No. 4 team on the leaderboard. 
+This repository presents team QMUL-SDS's participation on SCIVER shared task. Compared to the baseline system, we achieve substantial improvements on the dev set. As a result, our team is the No. 4 team on the leaderboard at the time. 
 
 ## Approach
 We propose an approach that performs scientific claim verification by doing binary classifications step-by-step. 
@@ -29,9 +29,11 @@ Please use `evidence` environment if you want to reproduce results from the base
 For your convenience, the proprecessed data is available [here](https://www.dropbox.com/sh/gwq9bkto4bpq7bz/AADj8Zj1gx9ew4xWTN7cS_0oa?dl=0); please see detailed descriptions of the SCIFACT dataset [here](https://github.com/allenai/scifact).
 
 ## Download trained Models
-The models we used to generation final submissions are available [here](https://drive.google.com/file/d/1ckqmjvCs20xyyLLlp3AuD8Dzdr0npVq_/view?usp=sharing). They are trained with both train set and dev set.
+All of the model checkpoints are available on Huggingface model hub under the user name `xiazeng`. In general, the naming pattern is `xiazeng/sciverbinary-model_${training_data}-${base_model}-${task}`, where `training_data` may be `train_data` or `train_dev_data`, `base_model` may be `biobertb` (BioBERT-base), `biobertb_wo` (BioBERT-base without continued pertaining on SciFact corpus) `biobertl` (BioBERT-large), `robertal` (RoBERTa-large), `task` may be `abstract` (trained on the task of abstract retrieval), `rationale` (trained on the task of rationale selection), `rationale_continue`  (first trained on the task of abstract retrieval and the continued the training on the task of rationale selection), `label-neutral_detector` (trained on the task of detecting whether there is enough info or not, i.e, the first step of the two-step label prediction task), `label-entail_detector` (trained on the task of detecting whether there is entailment or not, i.e, the second step of the two-step label prediction task).
 
-Our paper reported model performance of various BERT variants that are trained on train set and evaluated on dev set. They are only available upon request due to their large file size.
+The models we used to generate final submissions are have the model id `xiazeng/sciverbinary-model_train_dev_data-biobertl-abstract`, `xiazeng/sciverbinary-model_train_dev_data-biobertl-rationale_continue`, `xiazeng/sciverbinary-model_train_dev_data-robertal-label-neutral_detector` and `xiazeng/sciverbinary-model_train_dev_data-robertal-label-entail_detector` (order is the pipeline order). They are trained with both train set and dev set.
+
+Our paper reported model performance of various BERT variants that are trained on train set and evaluated on dev set. They are also available with coresponding model ids.
 
 
 ## Reproduce evaluation metrics
